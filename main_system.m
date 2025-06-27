@@ -14,19 +14,19 @@ C = [1 0 0 0 0 0
      0 1 0 0 0 0
      0 0 1 0 0 0];
  
-Q = 0.1*eye(6);
-R = 0.11*eye(3);
+Q = 0.1*eye(6); % 0.01*eye(6)
+R = 0.11*eye(3); % 0.1*eye(3)
 
 % Kalman filter parameters
 [K,P] = kfilter(A,C,Q,R);
 
 
 % Problem II and III constraint
-delta = 0.25;
+delta = 0.25; % 0.05
 
 % Problem IV weights
-w1 = 0.8;
-w2 = 1;
+w1 = 0.8; % 1
+w2 = 1; % 1
 
 
 save sys.mat
